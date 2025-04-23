@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/23 16:38:01 by santmore          #+#    #+#             */
+/*   Updated: 2025/04/23 18:52:18 by santmore         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
+	int i = 0;
     unsigned char   *d;
     const unsigned char   *s;
     size_t          i;
@@ -16,5 +29,5 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
         d[i] = s[i];
         i++;
     }
-    return (dst);
+	return (dst);
 }
