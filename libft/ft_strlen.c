@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: santmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 11:11:30 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 11:11:33 by santmore         ###   ########.fr       */
+/*   Created: 2025/04/21 11:34:00 by santmore          #+#    #+#             */
+/*   Updated: 2025/04/21 11:36:11 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strlen(const char *str)
 {
-	int	len;
+	int	i;
 
-	len = ft_strlen(s) - 1;
-	while (len >= 0 && s[len] != c)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		len--;
+		i++;
 	}
-	if (len >= 0 && s[len] == c)
-	{
-		return ((char *)&s[len]);
-	}
-	return (NULL);
+	return (i);
 }
