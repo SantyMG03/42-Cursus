@@ -6,13 +6,14 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 10:49:03 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 13:22:38 by santmore         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:16:07 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <stdio.h>
 
 int		ft_isalpha(int c);
 
@@ -24,7 +25,9 @@ int		ft_isascii(int c);
 
 int		ft_isprint(int c);
 
-int		ft_strlen(const char *str);
+int		ft_isspace(int c);
+
+size_t	ft_strlen(const char *str);
 
 void	*ft_memset(void *b, int c, size_t len);
 
@@ -63,5 +66,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 
 char	*ft_strtrim(char const *s1, char const *set);
+
+char	**ft_split(char const *s, char c);
 
 #endif
