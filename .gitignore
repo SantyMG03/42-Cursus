@@ -1,0 +1,9 @@
+# Ignorar archivos de objeto
+*.o
+
+# Ignorar librerías estáticas
+*.a
+
+# Ignorar ejecutables
+*.out
+
