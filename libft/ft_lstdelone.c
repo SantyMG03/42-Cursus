@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-05-01 09:50:39 by santmore          #+#    #+#             */
-/*   Updated: 2025-05-01 09:50:39 by santmore         ###   ########.fr       */
+/*   Created: 2025/05/01 09:50:39 by santmore          #+#    #+#             */
+/*   Updated: 2025/05/02 10:48:46 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
-		return;
 	del(lst->content);
 	free(lst);
 }

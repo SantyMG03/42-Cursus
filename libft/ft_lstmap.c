@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 11:06:52 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 11:07:01 by santmore         ###   ########.fr       */
+/*   Created: 2025/05/02 13:27:46 by santmore          #+#    #+#             */
+/*   Updated: 2025/05/02 13:41:26 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (c >= 'a' && c <= 'z')
+	t_list	*newlist;
+	t_list	*newnode;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	newlist = NULL;
+	while (lst)
 	{
-		c -= 32;
+		newnode = ft_lstnew(f(lst->content));
+		if (!newnode)
+		{
+			ft_lstclear(&newlist, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlist, newnode);
+		lst = lst->next;
 	}
-	return (c);
+	return (newlist);
 }

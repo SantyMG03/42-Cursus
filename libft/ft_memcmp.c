@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:19:15 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 11:24:39 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/02 12:27:55 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	memcmp(const void *s1, const void *s2, size_t n)
 	}
 	if (i == n)
 		return (0);
-	return (str1[i] - str2[i]);
+	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }

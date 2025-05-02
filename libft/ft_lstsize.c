@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-05-01 09:28:52 by santmore          #+#    #+#             */
-/*   Updated: 2025-05-01 09:28:52 by santmore         ###   ########.fr       */
+/*   Created: 2025/05/01 09:28:52 by santmore          #+#    #+#             */
+/*   Updated: 2025/05/02 10:56:04 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	aux = lst;
 	size = 0;
-	while(aux != NULL)
+	while (aux != NULL)
 	{
 		aux = aux->next;
 		size++;

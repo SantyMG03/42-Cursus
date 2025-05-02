@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   isadigit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: santmore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 11:06:52 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 11:07:01 by santmore         ###   ########.fr       */
+/*   Created: 2025/04/21 11:06:59 by santmore          #+#    #+#             */
+/*   Updated: 2025/04/21 11:15:28 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 48 && c <= 57)
 	{
-		c -= 32;
+		return (1);
 	}
-	return (c);
+	return (0);
 }

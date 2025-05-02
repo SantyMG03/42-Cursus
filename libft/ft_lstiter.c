@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-05-01 09:58:42 by santmore          #+#    #+#             */
-/*   Updated: 2025-05-01 09:58:42 by santmore         ###   ########.fr       */
+/*   Created: 2025/05/01 09:58:42 by santmore          #+#    #+#             */
+/*   Updated: 2025/05/02 13:26:37 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	t_list	*aux;
+
+	aux = lst;
+	while (aux)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(aux->content);
+		aux = aux->next;
 	}
 }

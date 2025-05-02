@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: santmore <santmore@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-05-01 09:36:07 by santmore          #+#    #+#             */
-/*   Updated: 2025-05-01 09:36:07 by santmore         ###   ########.fr       */
+/*   Created: 2025/05/01 09:36:07 by santmore          #+#    #+#             */
+/*   Updated: 2025/05/02 10:54:25 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*act;
-	t_list	*ant;
+	t_list	*aux;
 
-	act = lst;
-	ant = NULL;
-	while (act != NULL)
-	{
-		ant = act;
-		act = act->next;
-	}
-	return (ant);
+	if (!lst)
+		return (NULL);
+	aux = lst;
+	while (aux->next)
+		aux = aux->content;
+	return (aux);
 }

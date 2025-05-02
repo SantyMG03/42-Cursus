@@ -6,17 +6,17 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:32:41 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/28 11:42:39 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/02 13:08:37 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_numlen(int n)
+int	ft_numlen(int n)
 {
 	int	len;
 
-	len = (n <= 0); // Cuenta el signo o el 0 inicial
+	len = 0;
 	while (n)
 	{
 		n /= 10;
@@ -28,7 +28,7 @@ static int	ft_numlen(int n)
 char	*ft_itoa(int n)
 {
 	int		len;
-	long	num; // Usar long para manejar INT_MIN
+	long	num;
 	char	*str;
 
 	num = n;

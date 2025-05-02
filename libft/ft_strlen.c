@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 11:34:00 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/27 13:39:00 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/02 11:47:58 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
