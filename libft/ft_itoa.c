@@ -6,13 +6,13 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:32:41 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/02 13:08:37 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/06 11:17:53 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int n)
+static int	ft_numlen(int n)
 {
 	int	len;
 

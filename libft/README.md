@@ -1,3 +1,2 @@
-# Libft 
-El primer proyecto del curso de 42. Consiste en recrear ciertas funciones de 
-la librería estándar de C. Posteriormente se añadiran algunas funciones mas complejas
+# 42-Cursus
+Repositorio de mi estancia en el cursus en 42 Malaga

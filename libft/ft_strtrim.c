@@ -6,13 +6,13 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 13:23:00 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 13:30:36 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/06 11:20:07 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	guess(char const *s, char c)
+static int	guess(char const *s, char c)
 {
 	int	i;
 

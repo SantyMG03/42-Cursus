@@ -5,12 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/27 13:32:09 by santmore          #+#    #+#              #
-#    Updated: 2025/04/27 14:16:07 by santmore         ###   ########.fr        #
+#    Created: 2025/04/21 10:40:02 by santmore          #+#    #+#              #
+#    Updated: 2025/05/06 17:13:38 by santmore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Variables
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -28,20 +27,18 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-    ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-    ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-    rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-    rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re bonus

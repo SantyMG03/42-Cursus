@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 10:49:03 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/02 13:41:02 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/06 12:44:22 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int			ft_isalnum(int c);
 int			ft_isascii(int c);
 
 int			ft_isprint(int c);
-
-int			ft_isspace(int c);
 
 size_t		ft_strlen(const char *str);
 
@@ -52,7 +50,7 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void		*ft_memchr(const void *s, int c, size_t n);
 
-int			memcmp(const void *s1, const void *s2, size_t n);
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 

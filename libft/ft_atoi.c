@@ -6,11 +6,18 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:59:18 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/02 12:39:36 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/06 12:44:44 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isspace(int c)
+{
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *ptr)
 {
@@ -37,11 +44,4 @@ int	ft_atoi(const char *ptr)
 		i++;
 	}
 	return (res * signo);
-}
-
-int	ft_isspace(int c)
-{
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	return (0);
 }
