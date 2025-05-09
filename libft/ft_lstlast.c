@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 09:36:07 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/02 10:54:25 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/09 11:43:13 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ t_list	*ft_lstlast(t_list *lst)
 		return (NULL);
 	aux = lst;
 	while (aux->next)
-		aux = aux->content;
+		aux = aux->next;
 	return (aux);
 }

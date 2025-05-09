@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:31:17 by santmore          #+#    #+#             */
-/*   Updated: 2025/04/25 10:39:03 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/09 11:22:27 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		*z;
 	size_t	i;
 
 	i = 0;
-	z = s;
 	while (i < n)
 	{
-		z[i] = 0;
+		((char *)s)[i] = 0;
 		i++;
 	}
 }
