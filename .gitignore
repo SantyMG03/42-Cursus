@@ -7,3 +7,5 @@
 # Ignorar ejecutables
 *.out
 
+# Ignora json
+*.json
