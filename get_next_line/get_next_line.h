@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 21:57:37 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 11:15:06 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/16 11:46:04 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
+# define OPEN_MAX 1024
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char const *s1, char const *s2);

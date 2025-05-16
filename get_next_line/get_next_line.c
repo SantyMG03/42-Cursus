@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 21:57:31 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 11:25:49 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/16 11:46:37 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*read_file(int fd, char *res)
 	int		b_read;
 
 	if (!res)
-		ft_calloc(1, 1);
+		res = ft_calloc(1, 1);
 	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	b_read = 1;
 	while (b_read > 0)
@@ -89,15 +89,15 @@ char	*read_file(int fd, char *res)
 }
 
 char	*get_next_line(int fd){
-	static char	buffer;
+	static char	buffer[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buffer = read_file(fd, buffer);
+	buffer[fd] = read_file(fd, buffer);
 	if (!buffer)
 		return (NULL);
 	line = ft_line(buffer);
-	buffer = ft_next(buffer);
+	buffer[fd] = ft_next(buffer);
 	return (line);
 }
