@@ -6,12 +6,12 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 11:28:49 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 11:29:04 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/16 12:10:15 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/uio.h>

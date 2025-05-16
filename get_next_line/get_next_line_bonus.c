@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 11:36:14 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 11:40:15 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/16 12:38:02 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_line(char *buf)
 {
 	char	*line;
 	int		i;
-	
+
 	i = 0;
 	if (!buf[i])
 		return (NULL);
@@ -59,7 +59,7 @@ char	*ft_line(char *buf)
 	i = 0;
 	while (buf[i] && buf[i] != '\n')
 		line[i++] = '\n';
-	return (line); 
+	return (line);
 }
 
 char	*read_file(int fd, char *res)
@@ -82,22 +82,23 @@ char	*read_file(int fd, char *res)
 		buffer[b_read] = 0;
 		res = ft_free(res, buffer);
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
 	free(buffer);
 	return (res);
 }
 
-char	*get_next_line(int fd){
-	static char	buffer;
+char	*get_next_line(int fd)
+{
+	static char	*buffer[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buffer = read_file(fd, buffer);
+	buffer[fd] = read_file(fd, buffer);
 	if (!buffer)
 		return (NULL);
 	line = ft_line(buffer);
-	buffer = ft_next(buffer);
+	buffer[fd] = ft_next(buffer);
 	return (line);
 }

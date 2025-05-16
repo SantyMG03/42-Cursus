@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 21:57:08 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/15 22:38:35 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/16 12:13:29 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 char	*ft_strchr(const char *str, int searchedchar)
 {
 	char	*aux;
+
 	aux = (char *) str;
 	while (*aux != searchedchar && *aux != 0)
 		aux++;
@@ -81,7 +82,7 @@ void	*ft_calloc(size_t count, size_t size)
 size_t	ft_strlen(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i])
 		i++;
