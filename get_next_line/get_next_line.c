@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 21:57:31 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 12:38:26 by santmore         ###   ########.fr       */
+/*   Updated: 2025/05/19 20:04:47 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,13 @@ char	*ft_line(char *buf)
 	line = ft_calloc((i + 2), sizeof(char));
 	i = 0;
 	while (buf[i] && buf[i] != '\n')
+	{
+		line[i] = buf[i];
+		i++;
+	}
+	if (buf[i] == '\n')
 		line[i++] = '\n';
+	line[i] = '\0';
 	return (line);
 }
 
