@@ -5,28 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 11:28:49 by santmore          #+#    #+#             */
-/*   Updated: 2025/05/16 12:10:15 by santmore         ###   ########.fr       */
+/*   Created: 2025/06/09 11:00:43 by santmore          #+#    #+#             */
+/*   Updated: 2025/06/09 11:01:03 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/uio.h>
-# include <unistd.h>
-
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 15
 # endif
+# define MAX_FD 1024
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *str, int searchedchar);
 
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(char *s);
+size_t	ft_strlen(char *s);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*ft_strjoin(char *s1, char *s2);
+void	fill_str(char *res, char *s1, char *s2);
 
-size_t	ft_strlen(const char *str);
 #endif
