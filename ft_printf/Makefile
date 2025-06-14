@@ -6,7 +6,7 @@
 #    By: santmore <santmore@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/09 11:35:55 by santmore          #+#    #+#              #
-#    Updated: 2025/06/09 11:41:51 by santmore         ###   ########.fr        #
+#    Updated: 2025/06/14 17:52:39 by santmore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ INCLUDE	= 	pintf.h
 
 SRC		=	ft_printf.c			\
 			ft_basics.c			\
-			ft_hexadecimals.c	\
+			ft_hexa.c	\
 			ft_pointers.c		\
 
 OBJ		=	${SRC:.c=.o}

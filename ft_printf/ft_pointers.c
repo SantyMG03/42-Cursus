@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pointer.c                                       :+:      :+:    :+:   */
+/*   ft_pointers.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:17:39 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/14 17:30:55 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/14 17:55:51 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_print_pointer(unsigned long long ptr)
 	else
 	{
 		ft_search_pointer(ptr);
+		size += ft_len_pointer(ptr);
 	}
 	return (size);
 }

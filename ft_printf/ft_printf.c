@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:34:30 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/14 17:49:56 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/14 17:51:44 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_select_format(va_list args, const char wrd);
 
 int	ft_printf_char(int character)
 {
-	write(1,&character, 1);
+	write(1, &character, 1);
 	return (1);
 }
 
@@ -37,7 +37,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-		size += ft_print_char(str[i]);
+			size += ft_print_char(str[i]);
 		i++;
 	}
 	va_end(args);
@@ -56,7 +56,7 @@ static int	ft_select_format(va_list args, const char wrd)
 	else if (wrd == 'p')
 		size += ft_print_pointer(va_arg(args, unsigned long long));
 	else if (wrd == 'd' || wrd == 'i')
-		size += ft_print_number(va_arg(args, int));
+		size += ft_print_num(va_arg(args, int));
 	else if (wrd == 'u')
 		size += ft_print_unsign(va_arg(args, unsigned int));
 	else if (wrd == 'x' || wrd == 'X')
