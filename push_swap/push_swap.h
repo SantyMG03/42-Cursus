@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 01:30:25 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/16 01:44:25 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/16 01:46:37 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,10 @@ void	check_is_num(char **split);
 t_stack	*fill_stack(t_parameters *param, char **split);
 char	**fill_split(t_parameters *param, char **args);
 void	fill_pos(t_stack **a);
+
+
+void	ft_err(int num);
+int		ft_len(char *str);
+int		ft_atoi(const char *str);
 
 #endif
