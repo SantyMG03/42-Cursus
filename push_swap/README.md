@@ -1,0 +1,1 @@
+Push_swap is a simple algorithmic project where you have to sort data. Given a set of values stored in a stack, and you have to sort them using 2 stacks and a limited set of operations. The goal of this project is to use the minimum amount of instructions possible.
