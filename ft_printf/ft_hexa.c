@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hexa.c                                    :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 12:16:33 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/12 12:34:33 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/15 18:25:26 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	ft_search_hexa(unsigned int num, const char word)
 	}
 	else
 	{
-		if (num < 16)
+		if (num < 10)
 			ft_print_char(num + '0');
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:34:30 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/14 17:51:44 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/15 18:29:54 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_select_format(va_list args, const char wrd);
 
-int	ft_printf_char(int character)
+int	ft_print_char(int character)
 {
 	write(1, &character, 1);
 	return (1);
@@ -31,7 +31,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
-		if (str[i] == 0)
+		if (str[i] == '%')
 		{
 			size += ft_select_format(args, str[i + 1]);
 			i++;
@@ -52,7 +52,7 @@ static int	ft_select_format(va_list args, const char wrd)
 	if (wrd == 'c')
 		size += ft_print_char(va_arg(args, int));
 	else if (wrd == 's')
-		size += ft_print_string(va_arg(args, char *));
+		size += ft_print_str(va_arg(args, char *));
 	else if (wrd == 'p')
 		size += ft_print_pointer(va_arg(args, unsigned long long));
 	else if (wrd == 'd' || wrd == 'i')
