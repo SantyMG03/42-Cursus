@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 01:30:25 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/16 01:46:37 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/20 22:56:03 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ typedef struct s_algoritmia
 
 typedef struct s_stack
 {
-	int	val;
-	int	pos;
-	struct s_stack *next;
+	int				val;
+	int				pos;
+	struct s_stack	*next;
 }	t_stack;
 
 typedef struct s_parameter
@@ -44,24 +44,55 @@ typedef struct s_parameter
 	char	**args;
 	int		len_a;
 	int		len;
-	t_stack *a;
-	t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
 	t_stack	*perfect;	
 }	t_parameters;
 
-int		check_len(t_stack **a);
-int		check_ord(t_stack **a, int len);
-int		check_atoi(const char *str);
-void	check_dup(t_stack **a);
-void	check_is_num(char **split);
-
-t_stack	*fill_stack(t_parameters *param, char **split);
-char	**fill_split(t_parameters *param, char **args);
-void	fill_pos(t_stack **a);
-
-
-void	ft_err(int num);
-int		ft_len(char *str);
-int		ft_atoi(const char *str);
+// Checks
+int				check_len(t_stack **a);
+int				check_ord(t_stack **a, int len);
+int				check_atoi(const char *str);
+void			check_dup(t_stack **a);
+void			check_is_num(char **split);
+// Fill info
+t_stack			*fill_stack(t_parameters *param, char **split);
+char			**fill_split(t_parameters *param, char **args);
+void			fill_pos(t_stack **a);
+// Operations
+void			p_stack(t_stack **a, t_stack **b, char c);
+void			s_stack(t_stack **top, char c);
+void			r_stack(t_stack **stack, char c);
+void			r_rboth(t_stack **a, t_stack **b);
+void			rr_stack(t_stack **stack, char c);
+void			rr_rboth(t_stack **a, t_stack **b);
+void			ft_stkadd_front(t_stack **stack, t_stack *neww);
+void			ft_stkadd_back(t_stack **stack, t_stack *neww);
+// Sort
+int				search_less_moves(t_algoritmia *alg, t_stack **a, t_stack **b);
+int				order3(t_stack **a, int min, int max);
+void			search_less_pos(t_stack **a, t_stack **b, t_algoritmia *alg);
+void			order(t_parameters *param);
+// Pos
+void			make_pos(t_algoritmia *alg, t_algoritmia *param);
+void			make_pos_together(t_algoritmia *alg, t_parameters *param);
+// Util alg
+int				ft_min(t_stack **b);
+int				ft_min_arr(int *arr);
+int				ft_max(t_stack **b);
+int				ft_max_int(int a, int b);
+int				ft_last(t_stack **b);
+// Prog
+void			start_alg(t_algoritmia *alg, t_parameters param);
+void			push_swap(t_parameters *param, char **args);
+t_parameters	*ft_init_parameters(t_parameters *param);
+// Final sort
+void			reorder(t_stack **a, int min, char c);
+void			finish(t_parameters *param);
+void			free_stack(t_stack **a);
+// Util funcs
+void			ft_err(int num);
+int				ft_len(char *str);
+int				ft_atoi(const char *str);
 
 #endif
