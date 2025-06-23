@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 15:23:17 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/23 16:41:01 by santmore         ###   ########.fr       */
+/*   Updated: 2025/06/23 18:55:48 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,19 @@ int	check_atoi(const char *str)
 		if (*str == '-')
 			sign = -1;
 		str++;
+	}
+}
+
+void	check_is_num(char **split)
+{
+	int	i;
+
+	if (!split[0])
+		ft_err(0);
+	i = -1;
+	while (split[++i])
+	{
+		if (check_atoi(split[i]) == 0 || ft_len(split[i]) > 12)
+			ft_err(0);
 	}
 }
