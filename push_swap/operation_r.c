@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 12:03:09 by santmore          #+#    #+#             */
-/*   Updated: 2025/07/08 12:22:59 by santmore         ###   ########.fr       */
+/*   Updated: 2025/07/08 12:50:39 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	r_rboth(t_stack **a, t_stack **b)
 
 void	rr_stack(t_stack **stack, char c)
 {
-	t_stack *aux;
-	t_stack *stack_aux;
+	t_stack	*aux;
+	t_stack	*stack_aux;
 
 	stack_aux = (*stack);
 	while (stack_aux->next->next)
@@ -46,7 +46,7 @@ void	rr_stack(t_stack **stack, char c)
 	ft_stkadd_back(stack, aux);
 	if (c == 'a')
 		write(1, "rra\n", 4);
-	else if(c == 'b')
+	else if (c == 'b')
 		write(1, "rrb\n", 4);
 }
 
