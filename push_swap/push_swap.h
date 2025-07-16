@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 01:30:25 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/20 22:56:03 by santmore         ###   ########.fr       */
+/*   Updated: 2025/07/16 10:50:53 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_algoritmia
 {
 	int	last_b;
-	int	min_a;
+	int	max_b;
 	int	min_b;
 	int	moves_a;
 	int	moves_b;
@@ -28,6 +28,7 @@ typedef struct s_algoritmia
 	int	moves_b_rra;
 	int	moves_a_ra;
 	int	moves_a_rra;
+	int	less_moves;
 }	t_algoritmia;
 
 typedef struct s_stack
