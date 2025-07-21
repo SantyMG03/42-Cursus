@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 15:23:17 by santmore          #+#    #+#             */
-/*   Updated: 2025/06/23 18:55:48 by santmore         ###   ########.fr       */
+/*   Updated: 2025/07/21 11:44:50 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	check_dup(t_stack **a)
 		tmp2 = tmp1->next;
 		while (tmp2)
 		{
-			if (tmp1->next == tmp2->val)
+			if (tmp1->val == tmp2->val)
 				ft_err(0);
 			tmp2 = tmp2->next;
 		}
@@ -74,9 +74,22 @@ int	check_atoi(const char *str)
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			sign = -1;
+			sign = -sign;
 		str++;
 	}
+	if (!*str)
+		return (0);
+	while (*str)
+	{
+		if (((sign * num) <= INT_MAX && (sign * num) >= INT_MIN)
+			&& (*str <= '9' && *str >= '0'))
+			num = (num * 10) + (*str++ - '0');
+		else
+			return (0);
+	}
+	if (((sign * num) > INT_MAX || (sign * num) < INT_MIN))
+		return (0);
+	return (42);
 }
 
 void	check_is_num(char **split)
