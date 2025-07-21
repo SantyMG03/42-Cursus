@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 18:29:57 by santmore          #+#    #+#             */
-/*   Updated: 2025/07/15 18:37:32 by santmore         ###   ########.fr       */
+/*   Updated: 2025/07/16 11:04:19 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_stkadd_front(t_stack **stack, t_stack *new)
 
 void	ft_stkadd_back(t_stack **stack, t_stack *new)
 {
-	t_stack *aux;
-	
+	t_stack	*aux;
+
 	if (!(*stack))
 	{
 		(*stack) = new;

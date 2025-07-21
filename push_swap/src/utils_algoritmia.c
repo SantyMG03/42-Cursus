@@ -6,7 +6,7 @@
 /*   By: santmore <santmore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 18:40:03 by santmore          #+#    #+#             */
-/*   Updated: 2025/07/15 18:52:30 by santmore         ###   ########.fr       */
+/*   Updated: 2025/07/16 11:03:58 by santmore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	ft_max_int(int a, int b)
 
 int	ft_last(t_stack **b)
 {
-	t_stack *aux;
+	t_stack	*aux;
 
 	if (*b == NULL)
 		return (0);
